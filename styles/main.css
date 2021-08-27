@@ -89,6 +89,7 @@ body {
   -webkit-appearance: none;
   outline: none;
   background: #cdd7ee;
+  cursor: pointer;
 }
 
 .card input[type=range]::-webkit-slider-thumb {
