@@ -12,16 +12,11 @@ toggleContainer.addEventListener('click',() => {
 const slider = document.querySelector('input');
 const value = document.querySelector('.sliderValue span');
 
-value.textContent = slider.value;
+value.textContent = '$' + slider.value + ".00";
 
 slider.oninput = function() {
-    value.textContent = this.value;
+    value.textContent = "$" + this.value + ".00";
 }
-
-console.log(slider.value);
-
-
-
 
 
 

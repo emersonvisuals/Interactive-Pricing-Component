@@ -104,6 +104,19 @@ body {
   border-radius: 2em;
 }
 
+.card input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  content: '';
+  background-color: #10d5c2;
+  background-image: url(/images/icon-slider.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 40px;
+  width: 40px;
+  border-radius: 2em;
+  z-index: 2;
+}
+
 .card .slider-value-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -326,5 +339,6 @@ body {
   color: #fafbff;
   font-family: Manrope;
   font-size: 15px;
+  cursor: pointer;
 }
 /*# sourceMappingURL=main.css.map */
