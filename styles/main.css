@@ -84,7 +84,23 @@ body {
 }
 
 .card .slider input {
+  height: 10px;
   width: 80%;
+  -webkit-appearance: none;
+  outline: none;
+  background: #cdd7ee;
+}
+
+.card input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  content: '';
+  background-color: #10d5c2;
+  background-image: url(/images/icon-slider.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 40px;
+  width: 40px;
+  border-radius: 2em;
 }
 
 .card .slider-value-container {
@@ -143,6 +159,7 @@ body {
   background-color: #cdd7ee;
   -webkit-transition: 0.5s all;
   transition: 0.5s all;
+  cursor: pointer;
 }
 
 .card .details #toggle-container.active {
@@ -152,6 +169,7 @@ body {
   border-radius: 2em;
   -webkit-transition: 0.5s all;
   transition: 0.5s all;
+  cursor: pointer;
 }
 
 .card .details #toggle {

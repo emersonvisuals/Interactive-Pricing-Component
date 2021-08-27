@@ -65,10 +65,27 @@ body {
         margin: 1em 0;
     }
 
-    .slider input {
+    .slider input { // slider range
+        height:10px;
         width:80%;
+        -webkit-appearance: none;
+        outline: none;
+        background: $toggleBackground;
     }
 
+    input[type=range]::-webkit-slider-thumb { // slider thumb
+        -webkit-appearance: none;
+        content: '';
+        background-color: $sliderBackground;
+        background-image: url(/images/icon-slider.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 40px;
+        width: 40px;
+        border-radius: 2em;
+      }
+    
+   
     .slider-value-container {
         display: flex;
         flex-direction: row;
@@ -110,6 +127,7 @@ body {
             border-radius: 2em;
             background-color: $toggleBackground;
             transition: 0.5s all;
+            cursor: pointer;
         }
         
         #toggle-container.active {
@@ -118,6 +136,7 @@ body {
             width:50px;
             border-radius: 2em;
             transition: 0.5s all;
+            cursor: pointer;
         }
         
 
