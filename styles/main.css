@@ -73,48 +73,42 @@ body {
   color: #858fad;
 }
 
-.card .slider {
+.card .chrome {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin: 1em 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
-.card .slider input {
-  height: 10px;
+.card #myinput {
+  background: -webkit-gradient(linear, left top, right top, from(#82CFD0), color-stop(50%, #82CFD0), color-stop(50%, #fff), to(#fff));
+  background: linear-gradient(to right, #82CFD0 0%, #82CFD0 50%, #fff 50%, #fff 100%);
+  border: solid 1px #82CFD0;
+  border-radius: 8px;
+  height: 7px;
   width: 80%;
-  -webkit-appearance: none;
   outline: none;
-  background: #cdd7ee;
-  cursor: pointer;
-}
-
-.card input[type=range]::-webkit-slider-thumb {
+  -webkit-transition: 450ms ease-in;
+  transition: 450ms ease-in;
   -webkit-appearance: none;
-  content: '';
-  background-color: #10d5c2;
-  background-image: url(/images/icon-slider.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-  height: 40px;
-  width: 40px;
-  border-radius: 2em;
-}
-
-.card input[type=range]::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  content: '';
-  background-color: #10d5c2;
-  background-image: url(/images/icon-slider.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-  height: 40px;
-  width: 40px;
-  border-radius: 2em;
-  z-index: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .card .slider-value-container {

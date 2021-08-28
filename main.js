@@ -10,13 +10,18 @@ toggleContainer.addEventListener('click',() => {
 });
 
 const slider = document.querySelector('input');
-const value = document.querySelector('.sliderValue span');
+const amount = document.querySelector('.sliderValue span');
 
-value.textContent = '$' + slider.value + ".00";
+amount.textContent = '$' + slider.value + ".00";
 
 slider.oninput = function() {
-    value.textContent = "$" + this.value + ".00";
+    amount.textContent = "$" + this.value + ".00";
+    var value = (this.value-this.min)/(this.max-this.min)*100
+    this.style.background = 'linear-gradient(to right, #82CFD0 0%, #82CFD0 ' + value + '%, #fff ' + value + '%, white 100%)'
 }
+
+
+
 
 
 

@@ -59,44 +59,25 @@ body {
         }
     }
 
-    .slider {
+    .chrome {
         display: flex;
         justify-content: center;
-        margin: 1em 0;
+        align-items: center;
+        flex-direction: column;
     }
 
-    .slider input { // slider range
-        height:10px;
-        width:80%;
-        -webkit-appearance: none;
+    #myinput {
+        background: linear-gradient(to right, #82CFD0 0%, #82CFD0 50%, #fff 50%, #fff 100%);
+        border: solid 1px #82CFD0;
+        border-radius: 8px;
+        height: 7px;
+        width: 80%;
         outline: none;
-        background: $toggleBackground;
-        cursor: pointer;
-    }
-
-    input[type=range]::-webkit-slider-thumb { // slider thumb
+        transition:  450ms ease-in;
         -webkit-appearance: none;
-        content: '';
-        background-color: $sliderBackground;
-        background-image: url(/images/icon-slider.svg);
-        background-repeat: no-repeat;
-        background-position: center;
-        height: 40px;
-        width: 40px;
-        border-radius: 2em;
-      }
-
-    input[type=range]::-webkit-slider-thumb { // slider thumb
-        -webkit-appearance: none;
-        content: '';
-        background-color: $sliderBackground;
-        background-image: url(/images/icon-slider.svg);
-        background-repeat: no-repeat;
-        background-position: center;
-        height: 40px;
-        width: 40px;
-        border-radius: 2em;
-        z-index: 2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
       }
 
 
