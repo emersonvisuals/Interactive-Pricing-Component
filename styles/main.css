@@ -87,12 +87,12 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  margin: 2em 0;
 }
 
 .card #myinput {
-  background: -webkit-gradient(linear, left top, right top, from(#82CFD0), color-stop(50%, #82CFD0), color-stop(50%, #fff), to(#fff));
-  background: linear-gradient(to right, #82CFD0 0%, #82CFD0 50%, #fff 50%, #fff 100%);
-  border: solid 1px #82CFD0;
+  background: -webkit-gradient(linear, left top, right top, from(#10d5c2), color-stop(50%, #10d5c2), color-stop(50%, #eaeefb), to(#eaeefb));
+  background: linear-gradient(to right, #10d5c2 0%, #10d5c2 50%, #eaeefb 50%, #eaeefb 100%);
   border-radius: 8px;
   height: 7px;
   width: 80%;
@@ -109,6 +109,19 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.card [type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  content: '';
+  background-color: #10d5c2;
+  background-image: url(/images/icon-slider.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 40px;
+  width: 40px;
+  border-radius: 2em;
+  cursor: pointer;
 }
 
 .card .slider-value-container {
@@ -132,6 +145,12 @@ body {
   font-size: 25px;
   position: relative;
   font-weight: 800;
+  -webkit-transition: 0.5s all;
+  transition: 0.5s all;
+}
+
+.card .slider-value-container .sliderValue span.active {
+  color: red;
 }
 
 .card .slider-value-container .per-month {

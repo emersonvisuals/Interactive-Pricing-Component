@@ -64,11 +64,11 @@ body {
         justify-content: center;
         align-items: center;
         flex-direction: column;
+        margin: 2em 0;
     }
 
     #myinput {
-        background: linear-gradient(to right, #82CFD0 0%, #82CFD0 50%, #fff 50%, #fff 100%);
-        border: solid 1px #82CFD0;
+        background: linear-gradient(to right, $sliderBackground 0%, $sliderBackground 50%, $emptySliderBar 50%, $emptySliderBar 100%);
         border-radius: 8px;
         height: 7px;
         width: 80%;
@@ -78,6 +78,19 @@ body {
         display: flex;
         justify-content: center;
         align-items: center;
+      }
+
+     [type=range]::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        content: '';
+        background-color: #10d5c2;
+        background-image: url(/images/icon-slider.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 40px;
+        width: 40px;
+        border-radius: 2em;
+        cursor: pointer;
       }
 
 
@@ -92,6 +105,11 @@ body {
             font-size: 25px;
             position: relative;
             font-weight: 800;
+            transition: 0.5s all;
+        }
+
+        .sliderValue span.active {
+            color:red;
         }
 
         .per-month {
