@@ -144,35 +144,33 @@ body {
         }
 
 
-        .toggle-container {
+        .switch {
             position: relative;
             height: 20px;
             width: 40px;
             display: inline-block;
             border-radius: 20px;
             background-color: $toggleBackground;
+            cursor: pointer;
 
-            .slider-button {
-                content: '';
-                background-color: white;
-                width: 15px;
-                height: 15px;
-                position: absolute;
-                border-radius: 50%;
-                transform: translateX(0px);
-                transition: 0.5s all;
-                margin: 3px 0 0 3px;
-                z-index: 1;
-            }
-
+            
             input {
                 position: absolute;
-                width:30px;
-                height: 30px;
-                margin: 0 0 1em 0.25em;
-                cursor: pointer;
+                left: 0;
+                top: 0;
                 opacity: 0;
-                z-index: 2;
+                cursor: pointer;
+            }
+
+            .slider-button {
+                width: 16px;
+                height: 16px;
+                border-radius: 50%;
+                position: absolute;
+                background-color: white;
+                top: 2px;
+                left: 3px;
+                transition: all 0.5s;
             }
 
             input:checked + .slider-button {
