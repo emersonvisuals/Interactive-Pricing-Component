@@ -46,6 +46,7 @@ function refreshPrices(){
 
         if(checkbox.checked == true){
             price.textContent = `${((8 * .75)) * 12}`;
+            
         }else{
             price.textContent = 8;
         }
