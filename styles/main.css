@@ -172,7 +172,7 @@ body {
 
 .card .slider-value-container .per-month {
   font-family: Manrope;
-  margin: 0 0 0 0.5em;
+  margin: 0 0 0 0.75em;
 }
 
 .card .details {
@@ -185,6 +185,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin: 0 0 0 0.5em;
 }
 
 .card .details .monthly-billing {
@@ -193,7 +194,7 @@ body {
 
 .card .details .monthly-billing p {
   font-family: Manrope;
-  font-size: 15px;
+  font-size: 13px;
   color: #858fad;
   text-align: center;
 }
@@ -239,7 +240,7 @@ body {
 
 .card .details .yearly-billing p {
   font-family: Manrope;
-  font-size: 15px;
+  font-size: 13px;
   color: #858fad;
   text-align: center;
 }

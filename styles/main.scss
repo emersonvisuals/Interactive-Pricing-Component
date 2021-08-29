@@ -125,7 +125,7 @@ body {
 
         .per-month {
             font-family: $fontFamily;
-            margin: 0 0 0 0.5em;
+            margin: 0 0 0 0.75em;
         }
     }
     
@@ -133,13 +133,14 @@ body {
         display: flex;
         justify-content: center;
         align-items: center;
+        margin: 0 0 0 0.5em;
 
         .monthly-billing {
             padding: 0 0.75em 0 0;
 
             p {
                 font-family: $fontFamily;
-                font-size: 15px;
+                font-size: 13px;
                 color: $text;
                 text-align: center;
             }
@@ -186,7 +187,7 @@ body {
             
             p {
                 font-family: $fontFamily;
-                font-size: 15px;
+                font-size: 13px;
                 color: $text;
                 text-align: center;
             }
