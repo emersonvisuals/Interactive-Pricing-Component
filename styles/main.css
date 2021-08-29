@@ -67,13 +67,27 @@ body {
   padding: 2em 0 0 0;
 }
 
-.card .card-heading h1 {
+.card .card-heading .page-views {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   font-family: Manrope;
   font-size: 15px;
   color: #858fad;
 }
 
-.card .chrome {
+.card .card-heading .page-views h1 {
+  font-size: 15px;
+  margin: 0 0 0 0.25em;
+}
+
+.card .slider {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -91,8 +105,8 @@ body {
 }
 
 .card #myinput {
-  background: -webkit-gradient(linear, left top, right top, from(#10d5c2), color-stop(50%, #10d5c2), color-stop(50%, #eaeefb), to(#eaeefb));
-  background: linear-gradient(to right, #10d5c2 0%, #10d5c2 50%, #eaeefb 50%, #eaeefb 100%);
+  background: -webkit-gradient(linear, left top, right top, from(#a5f3eb), color-stop(50%, #a5f3eb), color-stop(50%, #eaeefb), to(#eaeefb));
+  background: linear-gradient(to right, #a5f3eb 0%, #a5f3eb 50%, #eaeefb 50%, #eaeefb 100%);
   border-radius: 8px;
   height: 7px;
   width: 80%;
@@ -122,6 +136,8 @@ body {
   width: 40px;
   border-radius: 2em;
   cursor: pointer;
+  -webkit-box-shadow: 0px 10px 25px 5px rgba(16, 213, 194, 0.35);
+  box-shadow: 0px 10px 25px 5px rgba(16, 213, 194, 0.35);
 }
 
 .card .slider-value-container {
@@ -179,52 +195,43 @@ body {
   font-size: 15px;
 }
 
-.card .details #toggle-container {
-  height: auto;
-  width: 50px;
-  border-radius: 2em;
+.card .details .toggle-container {
+  position: relative;
+  height: 20px;
+  width: 40px;
+  display: inline-block;
+  border-radius: 20px;
   background-color: #cdd7ee;
-  -webkit-transition: 0.5s all;
-  transition: 0.5s all;
-  cursor: pointer;
 }
 
-.card .details #toggle-container.active {
-  background-color: #10d5c2;
-  height: auto;
-  width: 50px;
-  border-radius: 2em;
-  -webkit-transition: 0.5s all;
-  transition: 0.5s all;
-  cursor: pointer;
-}
-
-.card .details #toggle {
+.card .details .toggle-container .slider-button {
   content: '';
-  color: azure;
-  margin: 0.25em;
-  height: 16px;
-  width: 16px;
-  background-color: #fafbff;
-  border-radius: 5em;
+  background-color: white;
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  border-radius: 50%;
   -webkit-transform: translateX(0px);
           transform: translateX(0px);
   -webkit-transition: 0.5s all;
   transition: 0.5s all;
+  margin: 3px 0 0 3px;
+  z-index: 1;
 }
 
-.card .details #toggle.active {
-  content: '';
-  color: azure;
-  margin: 0.25em;
-  height: 16px;
-  width: 16px;
-  background-color: #fafbff;
-  border-radius: 5em;
-  -webkit-transform: translateX(26px);
-          transform: translateX(26px);
-  -webkit-transition: 0.5s all;
-  transition: 0.5s all;
+.card .details .toggle-container input {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  margin: 0 0 1em 0.25em;
+  cursor: pointer;
+  opacity: 0;
+  z-index: 2;
+}
+
+.card .details .toggle-container input:checked + .slider-button {
+  -webkit-transform: translateX(18px);
+          transform: translateX(18px);
 }
 
 .card .details .yearly-billing {

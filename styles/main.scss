@@ -52,14 +52,22 @@ body {
         align-items: center;
         padding: 2em 0 0 0;
 
-        h1 {
+        .page-views {
+            display: flex;
+            justify-content: center;
+            align-items: center;
             font-family: $fontFamily;
             font-size: $font;
             color: $text;
+
+            h1 {
+                font-size: 15px;
+                margin: 0 0 0 0.25em;
+            }
         }
     }
 
-    .chrome {
+    .slider {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -68,7 +76,7 @@ body {
     }
 
     #myinput {
-        background: linear-gradient(to right, $sliderBackground 0%, $sliderBackground 50%, $emptySliderBar 50%, $emptySliderBar 100%);
+        background: linear-gradient(to right, $fullSliderBar 0%, $fullSliderBar 50%, $emptySliderBar 50%, $emptySliderBar 100%);
         border-radius: 8px;
         height: 7px;
         width: 80%;
@@ -91,6 +99,8 @@ body {
         width: 40px;
         border-radius: 2em;
         cursor: pointer;
+        -webkit-box-shadow: 0px 10px 25px 5px rgba(16,213,194,0.35); 
+        box-shadow: 0px 10px 25px 5px rgba(16,213,194,0.35);
       }
 
 
@@ -130,52 +140,51 @@ body {
                 font-family: $fontFamily;
                 font-size: 15px;
             }
-            
+
         }
 
 
-        #toggle-container {
-            height:auto;
-            width:50px;
-            border-radius: 2em;
+        .toggle-container {
+            position: relative;
+            height: 20px;
+            width: 40px;
+            display: inline-block;
+            border-radius: 20px;
             background-color: $toggleBackground;
-            transition: 0.5s all;
-            cursor: pointer;
-        }
-        
-        #toggle-container.active {
-            background-color: $sliderBackground;
-            height:auto;
-            width:50px;
-            border-radius: 2em;
-            transition: 0.5s all;
-            cursor: pointer;
-        }
-        
 
-        #toggle {
-            content: '';
-            color: azure;
-            margin: 0.25em;
-            height:16px;
-            width:16px;
-            background-color: $mainBackground;
-            border-radius: 5em;
-            transform:translateX(0px);
-            transition: 0.5s all;
+            .slider-button {
+                content: '';
+                background-color: white;
+                width: 15px;
+                height: 15px;
+                position: absolute;
+                border-radius: 50%;
+                transform: translateX(0px);
+                transition: 0.5s all;
+                margin: 3px 0 0 3px;
+                z-index: 1;
+            }
+
+            input {
+                position: absolute;
+                width:30px;
+                height: 30px;
+                margin: 0 0 1em 0.25em;
+                cursor: pointer;
+                opacity: 0;
+                z-index: 2;
+            }
+
+            input:checked + .slider-button {
+                transform: translateX(18px);
+            }
         }
 
-        #toggle.active {
-            content: '';
-            color: azure;
-            margin: 0.25em;
-            height:16px;
-            width:16px;
-            background-color: $mainBackground;
-            border-radius: 5em;
-            transform:translateX(26px);
-            transition: 0.5s all;
-        }
+ 
+
+
+
+    
 
         .yearly-billing {
             padding: 0 0 0 0.75em;
@@ -284,6 +293,5 @@ body {
 
 
 }
-
 
 

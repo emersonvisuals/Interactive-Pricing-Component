@@ -19,20 +19,21 @@
   <div class="card">
     
     <div class="card-heading">
-      <h1><span>100K</span> PAGE VIEWS</h1>
+      <div class="page-views"><span>100K</span><h1>PAGE VIEWS</h1></div>
     </div>
 
     <div id="slider-container">
-      <div class="chrome">
-        <input id="myinput" type="range" min='0.00', max="30.00" value='15.00' steps='1.00'>
+     
+      <div class="slider">
+        <input id="myinput" type="range" min='1', max="5" value='3' steps='1'>
       </div>
       
       <div class="slider-value-container">
         <div class="sliderValue">
-          <span>$15.00</span>
+          <span>$ <span class="priceValue">16</span>.00</span>
         </div>
         <div class="per-month">
-          <p>/ month</p>
+         <span class='month'>/month</span>
         </div>
       </div>
 
@@ -42,9 +43,12 @@
       <div class="monthly-billing">
         <p>Monthly Billing</p>
       </div>
-      <div id="toggle-container">
-        <div id="toggle"></div>
+      
+      <div class="toggle-container">
+        <input type="checkbox">
+        <span class="slider-button"></span>
       </div>
+
       <div class="yearly-billing">
         <p>Yearly Billing</p>
       </div>
