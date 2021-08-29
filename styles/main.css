@@ -24,7 +24,7 @@ body {
   background-image: url(/images/pattern-circles.svg);
   background-repeat: no-repeat;
   background-position-x: center;
-  background-position-y: 10px;
+  background-position-y: 40px;
   background-size: 150px;
 }
 
@@ -32,7 +32,7 @@ body {
   text-align: center;
   font-family: Manrope;
   font-size: 25px;
-  margin: 2em 0 0.5em 0;
+  margin: 3em 0 0.5em 0;
   color: #293356;
 }
 
@@ -40,7 +40,7 @@ body {
   text-align: center;
   font-family: Manrope;
   font-size: 15px;
-  padding: 0 7.5em 10% 7.5em;
+  padding: 0 4em 4em 4em;
   font-weight: 600;
   color: #858fad;
   margin: -0.5em 0 0 0;
@@ -48,7 +48,7 @@ body {
 
 .card {
   background-color: white;
-  margin: 0em 3em 4em 3em;
+  margin: 0em 2em 0 2em;
   border-radius: 1em;
   -webkit-box-shadow: 0px 5px 15px 1px rgba(0, 0, 0, 0.2);
   box-shadow: 0px 5px 15px 1px rgba(0, 0, 0, 0.2);
@@ -109,7 +109,7 @@ body {
   background: linear-gradient(to right, #a5f3eb 0%, #a5f3eb 50%, #eaeefb 50%, #eaeefb 100%);
   border-radius: 8px;
   height: 7px;
-  width: 80%;
+  width: 90%;
   outline: none;
   -webkit-transition: 450ms ease-in;
   transition: 450ms ease-in;
@@ -193,6 +193,8 @@ body {
 .card .details .monthly-billing p {
   font-family: Manrope;
   font-size: 15px;
+  color: #858fad;
+  text-align: center;
 }
 
 .card .details .switch {
@@ -237,10 +239,22 @@ body {
 .card .details .yearly-billing p {
   font-family: Manrope;
   font-size: 15px;
+  color: #858fad;
+  text-align: center;
 }
 
 .card .details .discount {
-  padding: 0 0 0 0.75em;
+  padding: 0 0.5em 0 0.75em;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .card .details .discount p {
@@ -250,6 +264,7 @@ body {
   color: #ff8c66;
   padding: 0.25em 0.5em;
   border-radius: 2em;
+  text-align: center;
 }
 
 .card .last-container {
@@ -287,6 +302,7 @@ body {
 
 .card .last-container .unlimited-websites p {
   font-family: Manrope;
+  color: #858fad;
 }
 
 .card .last-container .unlimited-websites::before {
@@ -311,6 +327,7 @@ body {
 
 .card .last-container .data-ownership p {
   font-family: Manrope;
+  color: #858fad;
 }
 
 .card .last-container .data-ownership::before {
@@ -335,6 +352,7 @@ body {
 
 .card .last-container .email-reports p {
   font-family: Manrope;
+  color: #858fad;
 }
 
 .card .last-container .email-reports::before {
@@ -344,7 +362,7 @@ body {
 }
 
 .card .last-container .last-button {
-  margin: 1em 0 0 0;
+  margin: 2em 0 0 0;
 }
 
 .card .last-container .last-button button {

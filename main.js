@@ -1,18 +1,11 @@
 // Variables
-
 let checkbox = document.querySelector('.switch input')
-let switcher = document.querySelector('.switch');
+let switchToggle = document.querySelector('.switch');
 let toggle = document.getElementById('toggle');
 let duration = document.querySelector('.month');
 let price = document.querySelector(".priceValue");
 let range = document.querySelector('#myinput');
 let pageViews = document.querySelector(".page-views span");
-
-console.log(switcher);
-console.log(checkbox);
-console.log(price);
-console.log(duration);
-
 
 // Slider Progress Bar
 range.oninput = function() {
@@ -23,28 +16,28 @@ range.oninput = function() {
 
 
 
-// Monthly or Yearly
-switcher.onclick = function(){
+
+// Monthly VS Yearly
+switchToggle.onclick = function(){
 
     
-
     if(checkbox.checked === true){
         
-        let priceInt = parseInt(price.textContent);
-        price.textContent = `${(priceInt - (priceInt * .25)) * 12}`;
+        let priceChange = parseInt(price.textContent);
+        price.textContent = `${((priceChange * .75)) * 12}`;
         duration.textContent = `/year`;
-        switcher.style.backgroundColor = "hsl(174, 86%, 45%)";
+        switchToggle.style.backgroundColor = "hsl(174, 86%, 45%)";
 
     }else{
 
         refreshPrices();
         duration.textContent = `/month`;
-        switcher.style.backgroundColor = "hsl(223, 50%, 87%)";
+        switchToggle.style.backgroundColor = "hsl(223, 50%, 87%)";
     }
 }
 
 
-// Values 
+// Range Values 
 range.addEventListener('input', refreshPrices);
 
 function refreshPrices(){
@@ -52,7 +45,7 @@ function refreshPrices(){
     if(range.value == 0){
 
         if(checkbox.checked == true){
-            price.textContent = `${(8 - (8 * .25)) * 12}`;
+            price.textContent = `${((8 * .75)) * 12}`;
         }else{
             price.textContent = 8;
         }
@@ -64,7 +57,7 @@ function refreshPrices(){
     if(range.value == 1){
         
         if(checkbox.checked == true){
-            price.textContent = 108;
+            price.textContent = `${((12 * .75)) * 12}`;
         }else{
             price.textContent = 12;
         }
@@ -75,7 +68,7 @@ function refreshPrices(){
     if(range.value == 2){
         
         if(checkbox.checked == true){
-            price.textContent = 144;
+            price.textContent = `${((16 * .75)) * 12}`;
         }else{
             price.textContent = 16;
         }
@@ -86,7 +79,7 @@ function refreshPrices(){
     if(range.value == 3){
 
         if(checkbox.checked == true){
-            price.textContent = 216;
+            price.textContent = `${((24 * .75)) * 12}`;
         }else{
             price.textContent = 24;
         }
@@ -98,7 +91,7 @@ function refreshPrices(){
     if(range.value == 4){
 
         if(checkbox.checked == true){
-            price.textContent = 324;
+            price.textContent = `${((36 * .75)) * 12}`;
         }else{
             price.textContent = 36;
         }

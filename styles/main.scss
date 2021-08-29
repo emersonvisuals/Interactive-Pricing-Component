@@ -17,14 +17,14 @@ body {
     background-image: url(/images/pattern-circles.svg);
     background-repeat: no-repeat;
     background-position-x: center;
-    background-position-y: 10px;
+    background-position-y: 40px;
     background-size: 150px;
     
     h1 {
         text-align: center;
         font-family: $fontFamily;
         font-size: 25px;
-        margin: 2em 0 0.5em 0;
+        margin: 3em 0 0.5em 0;
         color: $textAndCtaBackground;
     }
 
@@ -32,7 +32,7 @@ body {
         text-align: center;
         font-family: $fontFamily;
         font-size: $font;
-        padding:0 7.5em 10% 7.5em;
+        padding:0 4em 4em 4em;
         font-weight: 600;
         color: $text;
         margin: -0.5em 0 0 0;
@@ -41,7 +41,7 @@ body {
 
 .card {
     background-color: $pricingBackground;
-    margin: 0em 3em 4em 3em;
+    margin: 0em 2em 0 2em;
     border-radius: 1em;
     -webkit-box-shadow: 0px 5px 15px 1px rgba(0,0,0,0.2); 
     box-shadow: 0px 5px 15px 1px rgba(0,0,0,0.2);
@@ -79,7 +79,7 @@ body {
         background: linear-gradient(to right, $fullSliderBar 0%, $fullSliderBar 50%, $emptySliderBar 50%, $emptySliderBar 100%);
         border-radius: 8px;
         height: 7px;
-        width: 80%;
+        width: 90%;
         outline: none;
         transition:  450ms ease-in;
         -webkit-appearance: none;
@@ -139,6 +139,8 @@ body {
             p {
                 font-family: $fontFamily;
                 font-size: 15px;
+                color: $text;
+                text-align: center;
             }
 
         }
@@ -184,11 +186,17 @@ body {
             p {
                 font-family: $fontFamily;
                 font-size: 15px;
+                color: $text;
+                text-align: center;
             }
         }
 
         .discount {
-            padding: 0 0 0 0.75em;
+            padding: 0 0.5em 0 0.75em;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
 
             p {
                 font-family: $fontFamily;
@@ -197,6 +205,7 @@ body {
                 color: $discountText;
                 padding:0.25em 0.5em;
                 border-radius: 2em;
+                text-align: center;
             }
         }
 
@@ -220,6 +229,7 @@ body {
     
             p {
                 font-family: $fontFamily;
+                color: $text;
             }
         }
     
@@ -238,6 +248,7 @@ body {
     
             p {
                 font-family: $fontFamily;
+                color: $text;
             }
         }
     
@@ -257,6 +268,7 @@ body {
     
             p {
                 font-family: $fontFamily;
+                color: $text;
             }
         }
     
@@ -267,7 +279,7 @@ body {
         }
 
         .last-button {
-            margin: 1em 0 0 0;
+            margin: 2em 0 0 0;
 
             button {
                 background:none;
