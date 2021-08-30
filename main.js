@@ -4,7 +4,7 @@ let switchToggle = document.querySelector('.switch');
 let toggle = document.getElementById('toggle');
 let duration = document.querySelector('.month');
 let price = document.querySelector(".priceValue");
-let range = document.querySelector('#myinput');
+let range = document.getElementById('myinput');
 let pageViews = document.querySelector(".page-views span");
 
 // Slider Progress Bar
@@ -101,6 +101,24 @@ function refreshPrices(){
     }
 
 }
+
+
+// Discount Word Added to Media Screen Change
+
+  const desktopScreen = window.matchMedia("(max-width: 900px)")
+  const discount = document.querySelector('.discount p');
+
+  function desktopScreenChange(desktopScreen) {
+      if (desktopScreen.matches) {
+          discount.textContent = "25%";
+      } else {
+            discount.textContent = "25% discount";
+      }
+  }
+
+  desktopScreenChange(desktopScreen); 
+  desktopScreen.addListener(desktopScreenChange)
+
 
 
 

@@ -288,10 +288,15 @@ body {
                 background-color: $textAndCtaBackground;
                 border-radius: 2em;
                 padding: 0.75em 3em;
-                color: $mainBackground;
+                color: $text;
                 font-family: $fontFamily;
                 font-size: 15px;
                 cursor: pointer;
+                transition: 0.5s all;
+            }
+
+            button:hover {
+                color: $mainBackground;
             }
         }
     
@@ -300,4 +305,78 @@ body {
 
 }
 
+
+@media screen and (min-width: $medium) {
+    body {
+        background-size: 120em;
+        background-position-y: -14em;
+        
+    }
+
+    .card {
+        margin: 0em 25% 3em 25%;
+    }
+
+    .heading {
+        background-size: 130px;
+    }
+
+    .card #myinput {
+        width:75%;
+    }
+
+    .slider-value-container {
+        position: absolute;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        right:30%;
+        top:13.75em;
+
+        .sliderValue span {
+            font-family: $fontFamily;
+            font-size: 25px;
+            position: relative;
+            font-weight: 800;
+            transition: 0.5s all;
+        }
+
+        .sliderValue span.active {
+            color:red;
+        }
+
+        .per-month {
+            font-family: $fontFamily;
+            margin: 0 0 0 0.75em;
+        }
+    }
+
+    .card .card-heading {
+        justify-content: flex-start;
+        padding: 2em 0 0 4em;
+    }
+
+    .card .last-container {
+        flex-direction: row;
+        justify-content: space-around;
+        margin: 2em 0 0 0;
+    }
+
+    .card .list {
+
+        .unlimited-websites {
+            justify-content: flex-start;
+        }
+
+        .data-ownership {
+            justify-content: flex-start;
+        }
+
+        .email-reports {
+            justify-content: flex-start;
+        }
+    }
+    
+}
 

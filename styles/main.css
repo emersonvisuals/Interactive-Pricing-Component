@@ -372,9 +372,94 @@ body {
   background-color: #293356;
   border-radius: 2em;
   padding: 0.75em 3em;
-  color: #fafbff;
+  color: #858fad;
   font-family: Manrope;
   font-size: 15px;
   cursor: pointer;
+  -webkit-transition: 0.5s all;
+  transition: 0.5s all;
+}
+
+.card .last-container .last-button button:hover {
+  color: #fafbff;
+}
+
+@media screen and (min-width: 900px) {
+  body {
+    background-size: 120em;
+    background-position-y: -14em;
+  }
+  .card {
+    margin: 0em 25% 3em 25%;
+  }
+  .heading {
+    background-size: 130px;
+  }
+  .card #myinput {
+    width: 75%;
+  }
+  .slider-value-container {
+    position: absolute;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    right: 30%;
+    top: 13.75em;
+  }
+  .slider-value-container .sliderValue span {
+    font-family: Manrope;
+    font-size: 25px;
+    position: relative;
+    font-weight: 800;
+    -webkit-transition: 0.5s all;
+    transition: 0.5s all;
+  }
+  .slider-value-container .sliderValue span.active {
+    color: red;
+  }
+  .slider-value-container .per-month {
+    font-family: Manrope;
+    margin: 0 0 0 0.75em;
+  }
+  .card .card-heading {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    padding: 2em 0 0 4em;
+  }
+  .card .last-container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    margin: 2em 0 0 0;
+  }
+  .card .list .unlimited-websites {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .card .list .data-ownership {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .card .list .email-reports {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
 }
 /*# sourceMappingURL=main.css.map */
