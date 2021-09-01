@@ -101,7 +101,7 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin: 2em 0;
+  margin: 2.25em 0;
 }
 
 .card #myinput {
@@ -141,6 +141,22 @@ body {
   border: none;
 }
 
+.card [type=range]::-moz-range-thumb {
+  -webkit-appearance: none;
+  content: '';
+  background-color: #10d5c2;
+  background-image: url(/images/icon-slider.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 40px;
+  width: 40px;
+  border-radius: 2em;
+  cursor: pointer;
+  -webkit-box-shadow: 0px 10px 25px 5px rgba(16, 213, 194, 0.35);
+  box-shadow: 0px 10px 25px 5px rgba(16, 213, 194, 0.35);
+  border: none;
+}
+
 .card .slider-value-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -159,20 +175,17 @@ body {
 
 .card .slider-value-container .sliderValue span {
   font-family: Manrope;
-  font-size: 25px;
+  font-size: 30px;
   position: relative;
   font-weight: 800;
   -webkit-transition: 0.5s all;
   transition: 0.5s all;
 }
 
-.card .slider-value-container .sliderValue span.active {
-  color: red;
-}
-
 .card .slider-value-container .per-month {
   font-family: Manrope;
   margin: 0 0 0 0.75em;
+  color: #858fad;
 }
 
 .card .details {
